@@ -1,0 +1,30 @@
+2024-07-31 13:50:05,363 INFO    MainThread:77129 [wandb_setup.py:_flush():76] Current SDK version is 0.15.7
+2024-07-31 13:50:05,363 INFO    MainThread:77129 [wandb_setup.py:_flush():76] Configure stats pid to 77129
+2024-07-31 13:50:05,363 INFO    MainThread:77129 [wandb_setup.py:_flush():76] Loading settings from /home/yufei/.config/wandb/settings
+2024-07-31 13:50:05,363 INFO    MainThread:77129 [wandb_setup.py:_flush():76] Loading settings from /home/yufei/TADP/TADP/wandb/settings
+2024-07-31 13:50:05,363 INFO    MainThread:77129 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-07-31 13:50:05,363 INFO    MainThread:77129 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-07-31 13:50:05,364 INFO    MainThread:77129 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'TADP/test_wandb.py', 'program': 'test_wandb.py'}
+2024-07-31 13:50:05,364 INFO    MainThread:77129 [wandb_init.py:_log_setup():507] Logging user logs to /home/yufei/TADP/TADP/wandb/run-20240731_135005-0go6rjr5/logs/debug.log
+2024-07-31 13:50:05,364 INFO    MainThread:77129 [wandb_init.py:_log_setup():508] Logging internal logs to /home/yufei/TADP/TADP/wandb/run-20240731_135005-0go6rjr5/logs/debug-internal.log
+2024-07-31 13:50:05,365 INFO    MainThread:77129 [wandb_init.py:init():547] calling init triggers
+2024-07-31 13:50:05,365 INFO    MainThread:77129 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2024-07-31 13:50:05,365 INFO    MainThread:77129 [wandb_init.py:init():596] starting backend
+2024-07-31 13:50:05,365 INFO    MainThread:77129 [wandb_init.py:init():600] setting up manager
+2024-07-31 13:50:05,369 INFO    MainThread:77129 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-07-31 13:50:05,370 INFO    MainThread:77129 [wandb_init.py:init():606] backend started and connected
+2024-07-31 13:50:05,374 INFO    MainThread:77129 [wandb_init.py:init():697] updated telemetry
+2024-07-31 13:50:05,383 INFO    MainThread:77129 [wandb_init.py:init():730] communicating run to backend with 60.0 second timeout
+2024-07-31 13:50:17,785 INFO    MainThread:77129 [wandb_run.py:_on_init():2174] communicating current version
+2024-07-31 13:50:22,789 INFO    MainThread:77129 [wandb_run.py:_on_init():2183] got version response 
+2024-07-31 13:50:22,789 INFO    MainThread:77129 [wandb_init.py:init():781] starting run threads in backend
+2024-07-31 13:50:25,268 INFO    MainThread:77129 [wandb_run.py:_console_start():2153] atexit reg
+2024-07-31 13:50:25,270 INFO    MainThread:77129 [wandb_run.py:_redirect():2008] redirect: wrap_raw
+2024-07-31 13:50:25,270 INFO    MainThread:77129 [wandb_run.py:_redirect():2073] Wrapping output streams.
+2024-07-31 13:50:25,270 INFO    MainThread:77129 [wandb_run.py:_redirect():2098] Redirects installed.
+2024-07-31 13:50:25,271 INFO    MainThread:77129 [wandb_init.py:init():822] run started, returning control to user process
+2024-07-31 13:50:25,273 INFO    MainThread:77129 [wandb_run.py:_finish():1888] finishing run tadp/test-project/0go6rjr5
+2024-07-31 13:50:25,274 INFO    MainThread:77129 [wandb_run.py:_atexit_cleanup():2122] got exitcode: 0
+2024-07-31 13:50:25,274 INFO    MainThread:77129 [wandb_run.py:_restore():2105] restore
+2024-07-31 13:50:25,274 INFO    MainThread:77129 [wandb_run.py:_restore():2111] restore done

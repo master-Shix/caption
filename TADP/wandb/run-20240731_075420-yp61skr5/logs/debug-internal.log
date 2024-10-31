@@ -1,0 +1,81 @@
+2024-07-31 07:54:20,916 INFO    StreamThr :20867 [internal.py:wandb_internal():86] W&B internal server running at pid: 20867, started at: 2024-07-31 07:54:20.913985
+2024-07-31 07:54:20,920 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: status
+2024-07-31 07:54:20,923 INFO    WriterThread:20867 [datastore.py:open_for_write():85] open: /home/yufei/TADP/TADP/wandb/run-20240731_075420-yp61skr5/run-yp61skr5.wandb
+2024-07-31 07:54:20,927 DEBUG   SenderThread:20867 [sender.py:send():379] send: header
+2024-07-31 07:54:20,930 DEBUG   SenderThread:20867 [sender.py:send():379] send: run
+2024-07-31 07:54:25,931 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:54:30,933 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:54:35,935 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:54:40,937 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:54:45,938 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:54:50,940 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:54:55,942 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:55:00,943 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:55:05,945 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:55:07,665 INFO    SenderThread:20867 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1060, in _validate_conn
+    conn.connect()
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7f573c1cbe80>, 'Connection to api.wandb.ai timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connectionpool.py", line 801, in urlopen
+    retries = retries.increment(
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f573c1cbe80>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 322, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/sdk/lib/gql_request.py", line 55, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/requests/sessions.py", line 635, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/requests/adapters.py", line 553, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f573c1cbe80>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+2024-07-31 07:55:10,947 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:55:15,948 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: keepalive
+2024-07-31 07:55:20,950 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: cancel
+2024-07-31 07:55:20,951 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: cancel
+2024-07-31 07:55:22,964 DEBUG   HandlerThread:20867 [handler.py:handle_request():144] handle_request: shutdown
+2024-07-31 07:55:22,964 INFO    HandlerThread:20867 [handler.py:finish():857] shutting down handler
+2024-07-31 07:55:23,952 INFO    WriterThread:20867 [datastore.py:close():294] close: /home/yufei/TADP/TADP/wandb/run-20240731_075420-yp61skr5/run-yp61skr5.wandb
+2024-07-31 07:55:34,669 DEBUG   SenderThread:20867 [sender.py:send():388] Record cancelled: run
+2024-07-31 07:55:34,669 INFO    SenderThread:20867 [sender.py:finish():1552] shutting down sender

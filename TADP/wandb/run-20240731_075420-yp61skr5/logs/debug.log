@@ -1,0 +1,88 @@
+2024-07-31 07:54:20,903 INFO    MainThread:20797 [wandb_setup.py:_flush():76] Current SDK version is 0.15.7
+2024-07-31 07:54:20,903 INFO    MainThread:20797 [wandb_setup.py:_flush():76] Configure stats pid to 20797
+2024-07-31 07:54:20,904 INFO    MainThread:20797 [wandb_setup.py:_flush():76] Loading settings from /home/yufei/.config/wandb/settings
+2024-07-31 07:54:20,904 INFO    MainThread:20797 [wandb_setup.py:_flush():76] Loading settings from /home/yufei/TADP/TADP/wandb/settings
+2024-07-31 07:54:20,904 INFO    MainThread:20797 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-07-31 07:54:20,904 INFO    MainThread:20797 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-07-31 07:54:20,904 INFO    MainThread:20797 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'TADP/test_wandb.py', 'program': 'test_wandb.py'}
+2024-07-31 07:54:20,904 INFO    MainThread:20797 [wandb_init.py:_log_setup():507] Logging user logs to /home/yufei/TADP/TADP/wandb/run-20240731_075420-yp61skr5/logs/debug.log
+2024-07-31 07:54:20,904 INFO    MainThread:20797 [wandb_init.py:_log_setup():508] Logging internal logs to /home/yufei/TADP/TADP/wandb/run-20240731_075420-yp61skr5/logs/debug-internal.log
+2024-07-31 07:54:20,905 INFO    MainThread:20797 [wandb_init.py:init():547] calling init triggers
+2024-07-31 07:54:20,905 INFO    MainThread:20797 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2024-07-31 07:54:20,905 INFO    MainThread:20797 [wandb_init.py:init():596] starting backend
+2024-07-31 07:54:20,905 INFO    MainThread:20797 [wandb_init.py:init():600] setting up manager
+2024-07-31 07:54:20,910 INFO    MainThread:20797 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-07-31 07:54:20,912 INFO    MainThread:20797 [wandb_init.py:init():606] backend started and connected
+2024-07-31 07:54:20,916 INFO    MainThread:20797 [wandb_init.py:init():697] updated telemetry
+2024-07-31 07:54:20,928 INFO    MainThread:20797 [wandb_init.py:init():730] communicating run to backend with 60.0 second timeout
+2024-07-31 07:55:20,950 ERROR   MainThread:20797 [wandb_init.py:init():756] encountered error: Run initialization has timed out after 60.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2024-07-31 07:55:22,961 ERROR   MainThread:20797 [wandb_init.py:init():1165] Run initialization has timed out after 60.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+Traceback (most recent call last):
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 1147, in init
+    run = wi.init()
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 762, in init
+    raise error
+wandb.errors.CommError: Run initialization has timed out after 60.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2024-07-31 07:55:23,042 INFO    Thread-1  :20797 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1060, in _validate_conn
+    conn.connect()
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f0acee2d820>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/connectionpool.py", line 801, in urlopen
+    retries = retries.increment(
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0acee2d820>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 322, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/wandb/sdk/lib/gql_request.py", line 55, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/requests/sessions.py", line 635, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/yufei/anaconda3/envs/dadp/lib/python3.8/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0acee2d820>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2024-07-31 07:55:34,671 WARNING MsgRouterThr:20797 [router.py:message_loop():77] message_loop has been closed
